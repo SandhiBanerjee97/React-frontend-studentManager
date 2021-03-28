@@ -1,2 +1,2 @@
-const base_url="http://3.140.209.94:8080";
+const base_url="https://api-student-manager.herokuapp.com";
 export default base_url;
