@@ -37,7 +37,7 @@ const AllStudents=()=>{
             {
                 students.length>0? students.map((item)=>(
                     <Student key={item.id} student={item} updateState={updateStudentsStateList}/>
-                )) :"no Students available"
+                )) :"Loading..."
             }
         </div>
     )
