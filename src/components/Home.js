@@ -1,10 +1,25 @@
+import axios from "axios";
 import { useEffect } from "react";
+import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
+import base_url from "./../api/bootapi";
 import {Jumbotron,Container} from "reactstrap";
 const Home=()=>{
     useEffect(()=>{
         document.title="Home || Student manager App";
+        getHomeMessage();
     },[])
+    const getHomeMessage=()=>{
+        axios.get(`${base_url}/home`).then(
+            (response)=>{
+                toast.success(response.data);
+            },
+            (error)=>{
+                console.log(error)
+                toast.error("server error")
+            }
+        )
+    }
     return(
         <div>
             <Jumbotron className="text-center">
