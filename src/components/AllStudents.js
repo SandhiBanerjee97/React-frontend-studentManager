@@ -37,7 +37,7 @@ const AllStudents=()=>{
             {
                 students.length>0? students.map((item)=>(
                     <Student key={item.id} student={item} updateState={updateStudentsStateList}/>
-                )) :"Loading...Please be patient , Heroku takes a while to Load the Application on server😅"
+                )) :"Loading.....please be patient😅 , Heroku takes a while to Load the Application on server"
             }
         </div>
     )
