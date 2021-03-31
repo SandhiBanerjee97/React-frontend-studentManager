@@ -6,8 +6,8 @@ import base_url from "./../api/bootapi";
 import {Jumbotron,Container} from "reactstrap";
 const Home=()=>{
     useEffect(()=>{
-        document.title="Home || Student manager App";
         getHomeMessage();
+        document.title="Home || Student manager App";
     },[])
     const getHomeMessage=()=>{
         axios.get(`${base_url}/home`).then(
